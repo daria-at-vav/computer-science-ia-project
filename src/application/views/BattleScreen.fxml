@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.BattleScreen">
+   <top>
+      <Pane prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="172.0" layoutY="48.0" text="You" textFill="#4f66ba">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelEnemyName" alignment="CENTER" contentDisplay="CENTER" layoutX="484.0" layoutY="48.0" prefHeight="36.0" prefWidth="240.0" text="Enemy" textAlignment="CENTER" textFill="#b85190">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="25.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </top>
+   <right>
+      <Pane prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <ProgressBar fx:id="enemyHealthBar" layoutX="84.0" layoutY="-5.0" prefHeight="40.0" prefWidth="240.0" progress="1.0" style="-fx-accent: #f7a1d2; -fx-border-color: #de7ebe; -fx-border-width: 5;" />
+            <ImageView fx:id="enemyImage" fitHeight="240.0" fitWidth="240.0" layoutX="85.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="labelEnemyHealth" layoutX="8.0" layoutY="4.0" text="EnemyHP" textFill="#8f316a">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </right>
+   <center>
+      <Pane prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <ProgressBar fx:id="playerHealthBar" layoutX="75.0" layoutY="-5.0" prefHeight="40.0" prefWidth="240.0" progress="1.0" style="-fx-accent: #a1c1f7; -fx-border-color: #7ea2de; -fx-border-width: 5;" />
+            <ImageView fx:id="playerImage" fitHeight="240.0" fitWidth="240.0" layoutX="75.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="labelPlayerHealth" layoutX="330.0" layoutY="5.0" text="PlayerHP" textFill="#393091">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="textBox" layoutX="52.0" layoutY="35.0" prefHeight="100.0" prefWidth="570.0" style="-fx-border-width: 5; -fx-background-color: #ebc5eb; -fx-border-color: #bd4fb9; -fx-padding: 15;" text="TEXT GOES HERE TEXT GOES HERE TEXT GOES HERETEXT GOES HERE" textFill="#aa3ba6" wrapText="true">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="mainButton" alignment="CENTER" contentDisplay="CENTER" layoutX="642.0" layoutY="37.0" mnemonicParsing="false" onAction="#onMainButtonClicked" prefHeight="95.0" prefWidth="110.0" style="-fx-background-color: #ddd7f7; -fx-border-color: #8a79e0; -fx-border-width: 5; -fx-border-insets: -4;" text="Continue" textAlignment="CENTER" textFill="#7664d1" wrapText="true">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="20.0" />
+               </font></Button>
+         </children></Pane>
+   </bottom>
+</BorderPane>
